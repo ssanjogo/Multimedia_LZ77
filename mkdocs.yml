@@ -1,0 +1,24 @@
+site_name: LZ77
+nav:
+  - Home: index.md
+  - Main-Task: main.md
+  - LZ77 Functions: LZ77.md
+    
+theme:
+  name: material
+  palette:
+    primary: "green"
+    accent: "light purple"
+    
+plugins:
+  - search
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          setup_commands:
+            - import sys
+            - sys.path.append("src")
+      extra_dirs: 
+        - src
+        - src/LZ77Functions
