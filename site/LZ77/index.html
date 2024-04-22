@@ -290,9 +290,63 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#src.LZ77Functions.LZ77Functions.analisis" class="md-nav__link">
+    <span class="md-ellipsis">
+      analisis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.LZ77Functions.LZ77Functions.ascii_binario_a_texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      ascii_binario_a_texto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#src.LZ77Functions.LZ77Functions.lz77_compress" class="md-nav__link">
     <span class="md-ellipsis">
       lz77_compress
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.LZ77Functions.LZ77Functions.lz77_decompress" class="md-nav__link">
+    <span class="md-ellipsis">
+      lz77_decompress
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.LZ77Functions.LZ77Functions.read_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      read_file
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.LZ77Functions.LZ77Functions.texto_a_ascii" class="md-nav__link">
+    <span class="md-ellipsis">
+      texto_a_ascii
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.LZ77Functions.LZ77Functions.validate_configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      validate_configuration
     </span>
   </a>
   
@@ -340,9 +394,63 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#src.LZ77Functions.LZ77Functions.analisis" class="md-nav__link">
+    <span class="md-ellipsis">
+      analisis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.LZ77Functions.LZ77Functions.ascii_binario_a_texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      ascii_binario_a_texto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#src.LZ77Functions.LZ77Functions.lz77_compress" class="md-nav__link">
     <span class="md-ellipsis">
       lz77_compress
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.LZ77Functions.LZ77Functions.lz77_decompress" class="md-nav__link">
+    <span class="md-ellipsis">
+      lz77_decompress
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.LZ77Functions.LZ77Functions.read_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      read_file
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.LZ77Functions.LZ77Functions.texto_a_ascii" class="md-nav__link">
+    <span class="md-ellipsis">
+      texto_a_ascii
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.LZ77Functions.LZ77Functions.validate_configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      validate_configuration
     </span>
   </a>
   
@@ -386,6 +494,258 @@
 
 
 
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="src.LZ77Functions.LZ77Functions.analisis" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">analisis</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">Mdes</span><span class="p">,</span> <span class="n">Ment</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Method to give the information for the analysis of the data </p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>file_name</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Name of the file that contains the data to be analized.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>Ment</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Number of bits for entropy coding.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>Mdes</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Number of bits for describing the data.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+      <p>Returns:</p>
+
+          <details class="quote">
+            <summary>Source code in <code>src/LZ77Functions/LZ77Functions.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">analisis</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">Mdes</span><span class="p">,</span> <span class="n">Ment</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Method to give the information for the analysis of the data </span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        file_name (str): Name of the file that contains the data to be analized.</span>
+<span class="sd">        Ment (int): Number of bits for entropy coding.</span>
+<span class="sd">        Mdes (int): Number of bits for describing the data.</span>
+
+<span class="sd">    Returns:</span>
+
+
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="c1">#con distintos valores de Mdes y Ment entre 4 y 4096 y analizad el factor de compresión y el tiempo invertido</span>
+    <span class="n">compression_ratio</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="n">Mdes</span> <span class="o">&lt;</span> <span class="n">Ment</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;error&quot;</span>
+
+    <span class="n">inicio</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">text</span><span class="p">:</span>
+        <span class="n">binario</span> <span class="o">=</span> <span class="n">texto_a_ascii</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+        <span class="n">compressed_data</span> <span class="o">=</span> <span class="n">lz77_compress</span><span class="p">(</span><span class="n">binario</span><span class="p">,</span> <span class="n">Ment</span><span class="p">,</span> <span class="n">Mdes</span><span class="p">)</span>
+        <span class="n">compression_ratio</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">compressed_data</span><span class="p">)</span>
+
+    <span class="n">fin</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>  <span class="c1"># Tiempo de finalización</span>
+    <span class="n">tiempo_total</span> <span class="o">=</span> <span class="n">fin</span> <span class="o">-</span> <span class="n">inicio</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;tiempo&#39;</span><span class="p">:</span><span class="n">tiempo_total</span><span class="p">,</span> <span class="s2">&quot;Ratio Compression&quot;</span><span class="p">:</span><span class="n">compression_ratio</span><span class="p">,</span> <span class="s2">&quot;Factor&quot;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">compression_ratio</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;:1&quot;</span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="src.LZ77Functions.LZ77Functions.ascii_binario_a_texto" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">ascii_binario_a_texto</span><span class="p">(</span><span class="n">ascii_binario</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Convert binary ASCII representation to text.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>ascii_binario</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Binary ASCII representation to be converted to text.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>str</code></td>          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Text decoded from the binary ASCII representation.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>src/LZ77Functions/LZ77Functions.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">ascii_binario_a_texto</span><span class="p">(</span><span class="n">ascii_binario</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Convert binary ASCII representation to text.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        ascii_binario (str): Binary ASCII representation to be converted to text.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        str: Text decoded from the binary ASCII representation.</span>
+
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>                                                           <span class="c1"># Initialize the string where we are going to write the ASCII.</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">ascii_binario</span><span class="p">),</span> <span class="mi">8</span><span class="p">):</span>                           <span class="c1"># We iterate throug the binary ASCII, 8 bits each one.</span>
+        <span class="n">byte</span> <span class="o">=</span> <span class="n">ascii_binario</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">8</span><span class="p">]</span>                                     <span class="c1"># We take 8 bits together. </span>
+        <span class="n">decimal</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">byte</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>                                          <span class="c1"># Convert from binary to decimal.</span>
+        <span class="n">caracter</span> <span class="o">=</span> <span class="nb">chr</span><span class="p">(</span><span class="n">decimal</span><span class="p">)</span>                                         <span class="c1"># Convert from decimal to a ASCII character. </span>
+        <span class="n">text</span> <span class="o">+=</span> <span class="n">caracter</span>                                                <span class="c1"># Add the character to the output string. </span>
+
+    <span class="k">return</span> <span class="n">text</span>                                                         <span class="c1"># Give back the string text. </span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
 
 
 <div class="doc doc-object doc-function">
@@ -461,20 +821,7 @@
 
           <details class="quote">
             <summary>Source code in <code>src/LZ77Functions/LZ77Functions.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">26</span>
 <span class="normal">27</span>
 <span class="normal">28</span>
 <span class="normal">29</span>
@@ -533,15 +880,7 @@
 <span class="normal">82</span>
 <span class="normal">83</span>
 <span class="normal">84</span>
-<span class="normal">85</span>
-<span class="normal">86</span>
-<span class="normal">87</span>
-<span class="normal">88</span>
-<span class="normal">89</span>
-<span class="normal">90</span>
-<span class="normal">91</span>
-<span class="normal">92</span>
-<span class="normal">93</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">lz77_compress</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">Ment</span><span class="p">,</span> <span class="n">Mdes</span><span class="p">):</span>
+<span class="normal">85</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">lz77_compress</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">Ment</span><span class="p">,</span> <span class="n">Mdes</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    This method is used to compress some data with the lz77 algorithm.</span>
 
@@ -553,75 +892,614 @@
 <span class="sd">      compressed_data: Output of the data compressed.</span>
 <span class="sd">    &#39;&#39;&#39;</span>
 
-    <span class="n">validate_configuration</span><span class="p">(</span><span class="n">Ment</span><span class="p">,</span> <span class="n">Mdes</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
-    <span class="n">compressed_data</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">Mdes</span><span class="p">])</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;COMPRESSED_DATA_START&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">compressed_data</span><span class="p">)</span>
-    <span class="n">i</span> <span class="o">=</span> <span class="n">Mdes</span> <span class="c1">#letra por la que vamos</span>
-    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">-</span><span class="n">Ment</span><span class="p">):</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Remaining data - &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)]))</span>
-            <span class="n">compressed_data</span><span class="o">+=</span><span class="nb">str</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)])</span>
-            <span class="k">return</span> <span class="n">compressed_data</span>
+    <span class="n">validate_configuration</span><span class="p">(</span><span class="n">Ment</span><span class="p">,</span> <span class="n">Mdes</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>                                                       <span class="c1"># Check if the configuration is valid. </span>
+    <span class="n">compressed_data</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">Mdes</span><span class="p">])</span>                                                                 <span class="c1"># Inicialize the compressed data as the string of the sliding window.</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">Mdes</span>                                                                                            <span class="c1"># Inicialize i as the sliding window. </span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>                                                                                <span class="c1"># Iterate while the sliding window is smaller than the length of the data. </span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">-</span><span class="n">Ment</span><span class="p">):</span>                                                                        <span class="c1"># Check if the length of the data minus the sliding window is smaller than i.                 </span>
+            <span class="n">compressed_data</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)])</span>                                                   <span class="c1"># We add the remaining data to the compressed data. </span>
+            <span class="k">return</span> <span class="n">compressed_data</span>                                                                      <span class="c1"># Give back the compressed data</span>
 
-        <span class="n">match_found</span> <span class="o">=</span> <span class="kc">False</span>
-        <span class="c1">#Para j en rango 1 hasta el tamaño de la entrada o el maximo de la cadena... Para saber cuantos valores comparamos</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">i</span> <span class="o">-</span> <span class="n">Mdes</span><span class="p">):</span><span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">i</span> <span class="o">-</span> <span class="n">Mdes</span><span class="p">)</span><span class="o">+</span><span class="n">Mdes</span><span class="p">])</span><span class="o">+</span><span class="s2">&quot; - &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="nb">min</span><span class="p">(</span><span class="n">Ment</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">-</span> <span class="n">i</span><span class="p">)]))</span>
-        <span class="nb">print</span><span class="p">()</span>
+        <span class="n">match_found</span> <span class="o">=</span> <span class="kc">False</span>                                                                             <span class="c1"># Inicialize the variable to find a match as False. </span>
 
-        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">Ment</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">-</span> <span class="n">i</span><span class="p">),</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Entrada: &quot;</span><span class="p">)</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">])</span>
-            <span class="k">if</span> <span class="n">j</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-                <span class="k">return</span> <span class="s2">&quot;Literal&quot;</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">Ment</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">-</span> <span class="n">i</span><span class="p">),</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>                                                  <span class="c1"># For j in range 1 to the size of the input or the maximum of the string... To know how many values we are comparing.</span>
+            <span class="k">if</span> <span class="n">j</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>                                                                                  <span class="c1"># Check if j is equal to 1. </span>
+                <span class="k">return</span> <span class="s2">&quot;Literal&quot;</span>                                                                        <span class="c1"># If so, whe have a Literal. </span>
 
-            <span class="c1">#Iteracion para comparar por la ventan deslizante</span>
-            <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">i</span> <span class="o">-</span> <span class="n">Mdes</span><span class="p">),</span><span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">i</span> <span class="o">-</span> <span class="n">Mdes</span><span class="p">)</span><span class="o">+</span><span class="n">Mdes</span><span class="p">):</span>
-                <span class="k">if</span> <span class="n">j</span> <span class="o">&gt;</span> <span class="n">i</span><span class="o">-</span><span class="n">k</span><span class="p">:</span>
-                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;j :&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; , i-k &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="n">k</span><span class="p">))</span>
+            <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">i</span> <span class="o">-</span> <span class="n">Mdes</span><span class="p">),</span><span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">i</span> <span class="o">-</span> <span class="n">Mdes</span><span class="p">)</span><span class="o">+</span><span class="n">Mdes</span><span class="p">):</span>                                     <span class="c1"># Iteration to find matches in the sliding window</span>
+                <span class="k">if</span> <span class="n">j</span> <span class="o">&gt;</span> <span class="n">i</span><span class="o">-</span><span class="n">k</span><span class="p">:</span>                                                                             <span class="c1"># Check if j is bigger than i - k.</span>
+                    <span class="k">break</span>                                                                               <span class="c1"># If so, finish the current iteration. </span>
+
+                <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="n">data</span><span class="p">[</span><span class="n">k</span><span class="p">:</span><span class="n">k</span><span class="o">+</span><span class="n">j</span><span class="p">]:</span>                                                          <span class="c1"># Check if there is a match of the data in our sliding window.</span>
+                    <span class="n">match_found</span> <span class="o">=</span> <span class="kc">True</span>                                                                  <span class="c1"># We activate the boolean because we found a match. </span>
+                    <span class="n">match_length</span> <span class="o">=</span> <span class="n">j</span>                                                                    <span class="c1"># We establish the length of the match. </span>
+                    <span class="n">match_distance</span> <span class="o">=</span> <span class="n">i</span> <span class="o">-</span> <span class="n">k</span>                                                              <span class="c1"># We establish the match distance. </span>
+                    <span class="n">compressed_data</span> <span class="o">+=</span> <span class="s1">&#39;1&#39;</span>                                                              <span class="c1"># Addition of a 1 to the compressed data  </span>
+
+                    <span class="k">if</span> <span class="n">match_length</span> <span class="o">==</span> <span class="n">Ment</span><span class="p">:</span>                                                            <span class="c1"># In case that the match length is equal to the input window.</span>
+                        <span class="n">compressed_data</span> <span class="o">+=</span> <span class="nb">format</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">log2</span><span class="p">(</span><span class="n">Ment</span><span class="p">)))</span> <span class="o">+</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span>             <span class="c1"># We write the compressed data into the output</span>
+
+                    <span class="k">else</span><span class="p">:</span>                                                                               <span class="c1"># If the match length is not equal to the input window size.</span>
+                        <span class="n">compressed_data</span> <span class="o">+=</span> <span class="nb">format</span><span class="p">(</span><span class="n">match_length</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">log2</span><span class="p">(</span><span class="n">Ment</span><span class="p">)))</span> <span class="o">+</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span>  <span class="c1"># We write the compressed data, with the match length. </span>
+
+                    <span class="k">if</span> <span class="n">match_distance</span> <span class="o">==</span> <span class="n">Mdes</span><span class="p">:</span>                                                          <span class="c1"># If the match distances is equal to the sliding window. </span>
+                        <span class="n">compressed_data</span> <span class="o">+=</span><span class="nb">format</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">log2</span><span class="p">(</span><span class="n">Mdes</span><span class="p">)))</span> <span class="o">+</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span>              <span class="c1"># Write compressed data with no match distance.</span>
+
+                    <span class="k">else</span><span class="p">:</span>                                                                               <span class="c1"># If the match distance is not equal to the sliding window size.</span>
+                        <span class="n">compressed_data</span> <span class="o">+=</span><span class="nb">format</span><span class="p">(</span><span class="n">match_distance</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">log2</span><span class="p">(</span><span class="n">Mdes</span><span class="p">)))</span> <span class="o">+</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span> <span class="c1"># Write compressed data with match distance.</span>
+
+                    <span class="n">i</span> <span class="o">+=</span> <span class="n">match_length</span>                                                                   <span class="c1"># We establish the begining of the sliding window.</span>
                     <span class="k">break</span>
-                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Letra :&quot;</span><span class="p">,</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
-                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;tamaño comparar :&quot;</span><span class="p">,</span><span class="nb">str</span><span class="p">(</span><span class="n">j</span><span class="p">))</span>
-                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;posicion deslizante :&quot;</span><span class="p">,</span><span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">))</span>
-                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Comparacion Deslizante&quot;</span><span class="p">)</span>
-                <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">k</span><span class="p">:</span><span class="n">k</span><span class="o">+</span><span class="n">j</span><span class="p">])</span> <span class="o">+</span><span class="s2">&quot; --- &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">]))</span>
-                <span class="nb">print</span><span class="p">()</span>
-                <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="n">data</span><span class="p">[</span><span class="n">k</span><span class="p">:</span><span class="n">k</span><span class="o">+</span><span class="n">j</span><span class="p">]:</span>
-                    <span class="n">match_found</span> <span class="o">=</span> <span class="kc">True</span>
-                    <span class="n">match_length</span> <span class="o">=</span> <span class="n">j</span>
-                    <span class="n">match_distance</span> <span class="o">=</span> <span class="n">i</span> <span class="o">-</span> <span class="n">k</span>
-                    <span class="n">compressed_data</span> <span class="o">+=</span> <span class="s1">&#39;1&#39;</span>
-                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Zero compressed&quot;</span><span class="p">)</span>
-                    <span class="nb">print</span><span class="p">(</span><span class="nb">format</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">log2</span><span class="p">(</span><span class="n">Ment</span><span class="p">)))</span> <span class="o">+</span> <span class="s1">&#39;b&#39;</span><span class="p">))</span>
-                    <span class="k">if</span> <span class="n">match_length</span><span class="o">==</span><span class="n">Ment</span><span class="p">:</span>
-                        <span class="n">compressed_data</span> <span class="o">+=</span><span class="nb">format</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">log2</span><span class="p">(</span><span class="n">Ment</span><span class="p">)))</span> <span class="o">+</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span>
-                    <span class="k">else</span><span class="p">:</span>
-                        <span class="n">compressed_data</span> <span class="o">+=</span><span class="nb">format</span><span class="p">(</span><span class="n">match_length</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">log2</span><span class="p">(</span><span class="n">Ment</span><span class="p">)))</span> <span class="o">+</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span>
-                    <span class="k">if</span> <span class="n">match_distance</span><span class="o">==</span><span class="n">Mdes</span><span class="p">:</span>
-                        <span class="n">compressed_data</span> <span class="o">+=</span><span class="nb">format</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">log2</span><span class="p">(</span><span class="n">Mdes</span><span class="p">)))</span> <span class="o">+</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span>
-                    <span class="k">else</span><span class="p">:</span>
-                        <span class="n">compressed_data</span> <span class="o">+=</span><span class="nb">format</span><span class="p">(</span><span class="n">match_distance</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">log2</span><span class="p">(</span><span class="n">Mdes</span><span class="p">)))</span> <span class="o">+</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">match_found</span><span class="p">:</span>                                                                             <span class="c1"># In case that we found a match. </span>
+                <span class="k">break</span>                                                                                   <span class="c1"># We finish the current iteration. </span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">match_found</span><span class="p">:</span>                                                                             <span class="c1"># In case that we didn&#39;t find a match.</span>
+            <span class="n">compressed_data</span> <span class="o">+=</span> <span class="s1">&#39;0&#39;</span> <span class="o">+</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>                                                            <span class="c1"># Addition of a literal to the compressed data. </span>
+            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>                                                                                      <span class="c1"># Add 1 to the begining of the sliding window. </span>
+        <span class="n">match_found</span> <span class="o">=</span> <span class="kc">False</span>                                                                             <span class="c1"># Reset the value of the match found.</span>
+
+    <span class="k">return</span> <span class="n">compressed_data</span><span class="p">[:</span><span class="n">Mdes</span><span class="p">]</span> <span class="o">+</span> <span class="n">compressed_data</span><span class="p">[</span><span class="n">Mdes</span><span class="p">:]</span>                                              <span class="c1"># Give back the compressed data. </span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
 
 
-                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;compressed&quot;</span><span class="p">)</span>
-                    <span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">])</span>
-                    <span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">k</span><span class="p">:</span><span class="n">k</span><span class="o">+</span><span class="n">j</span><span class="p">])</span>
-                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;(&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">match_length</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;,&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">match_distance</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;)&quot;</span><span class="p">)</span>
-                    <span class="nb">print</span><span class="p">(</span><span class="n">compressed_data</span><span class="p">)</span>
-                    <span class="n">i</span> <span class="o">+=</span> <span class="n">match_length</span>
+<div class="doc doc-object doc-function">
 
-                    <span class="k">break</span>
-            <span class="k">if</span> <span class="n">match_found</span><span class="p">:</span>
-                <span class="k">break</span>
 
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">match_found</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Literal&quot;</span><span class="p">)</span>
-            <span class="n">compressed_data</span> <span class="o">+=</span> <span class="s1">&#39;0&#39;</span> <span class="o">+</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="n">match_found</span><span class="o">=</span><span class="kc">False</span>
 
-    <span class="k">return</span> <span class="n">compressed_data</span><span class="p">[:</span><span class="n">Mdes</span><span class="p">]</span> <span class="o">+</span> <span class="n">compressed_data</span><span class="p">[</span><span class="n">Mdes</span><span class="p">:]</span>
+<h2 id="src.LZ77Functions.LZ77Functions.lz77_decompress" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">lz77_decompress</span><span class="p">(</span><span class="n">compressed_data</span><span class="p">,</span> <span class="n">Ment</span><span class="p">,</span> <span class="n">Mdes</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Decompress data using the LZ77 algorithm.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>compressed_data</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Compressed data to be decompressed.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>Ment</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Number of bits for entropy coding.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>Mdes</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Number of bits for describing the data.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>str</code></td>          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Decompressed data.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>src/LZ77Functions/LZ77Functions.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">lz77_decompress</span><span class="p">(</span><span class="n">compressed_data</span><span class="p">,</span> <span class="n">Ment</span><span class="p">,</span> <span class="n">Mdes</span><span class="p">):</span> 
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Decompress data using the LZ77 algorithm.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        compressed_data (str): Compressed data to be decompressed.</span>
+<span class="sd">        Ment (int): Number of bits for entropy coding.</span>
+<span class="sd">        Mdes (int): Number of bits for describing the data.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        str: Decompressed data.</span>
+
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">decompressed_data</span> <span class="o">=</span> <span class="n">compressed_data</span><span class="p">[:</span><span class="n">Mdes</span><span class="p">]</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">Mdes</span>
+
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">compressed_data</span><span class="p">)</span><span class="o">-</span><span class="n">Ment</span><span class="p">:</span>
+        <span class="n">control_bit</span> <span class="o">=</span> <span class="n">compressed_data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="n">control_bit</span> <span class="o">==</span> <span class="s1">&#39;0&#39;</span><span class="p">:</span>  <span class="c1"># Literal</span>
+            <span class="n">decompressed_data</span> <span class="o">+=</span> <span class="n">compressed_data</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">i</span> <span class="o">+=</span> <span class="mi">2</span>
+
+        <span class="k">else</span><span class="p">:</span>  <span class="c1"># Tupla (L,D)</span>
+            <span class="n">length_bits</span> <span class="o">=</span> <span class="n">compressed_data</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="o">+</span><span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">log2</span><span class="p">(</span><span class="n">Ment</span><span class="p">))]</span>
+            <span class="n">distance_bits</span> <span class="o">=</span> <span class="n">compressed_data</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="o">+</span><span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">log2</span><span class="p">(</span><span class="n">Ment</span><span class="p">)):</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="o">+</span><span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">log2</span><span class="p">(</span><span class="n">Ment</span><span class="p">))</span><span class="o">+</span><span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">log2</span><span class="p">(</span><span class="n">Mdes</span><span class="p">))]</span>
+            <span class="n">length</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">length_bits</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="n">distance</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">distance_bits</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">length</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">length</span> <span class="o">=</span> <span class="n">Ment</span>
+            <span class="k">if</span> <span class="n">distance</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">distance</span> <span class="o">=</span> <span class="n">Mdes</span>
+
+            <span class="n">tmp</span><span class="o">=</span><span class="n">decompressed_data</span>
+
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">length</span><span class="p">):</span>
+                <span class="n">decompressed_data</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">tmp</span><span class="p">[</span><span class="o">-</span><span class="n">distance</span><span class="o">+</span><span class="n">j</span><span class="p">])</span>
+
+            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">log2</span><span class="p">(</span><span class="n">Ment</span><span class="p">))</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">log2</span><span class="p">(</span><span class="n">Mdes</span><span class="p">))</span>
+
+    <span class="n">decompressed_data</span><span class="o">+=</span><span class="nb">str</span><span class="p">(</span><span class="n">compressed_data</span><span class="p">[</span><span class="n">i</span><span class="p">:])</span>
+
+    <span class="k">return</span> <span class="n">decompressed_data</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="src.LZ77Functions.LZ77Functions.read_file" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">read_file</span><span class="p">(</span><span class="n">file_name</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Read the contents of a file.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>file_name</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Name of the file to read.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>str</code></td>          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Contents of the file.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>src/LZ77Functions/LZ77Functions.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">read_file</span><span class="p">(</span><span class="n">file_name</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Read the contents of a file.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        file_name (str): Name of the file to read.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        str: Contents of the file.</span>
+
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;latin1&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">archivo</span><span class="p">:</span>                           <span class="c1"># We open the file. </span>
+            <span class="n">contenido</span> <span class="o">=</span> <span class="n">archivo</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>                                  <span class="c1"># We read the file</span>
+        <span class="k">return</span> <span class="n">contenido</span>                                                <span class="c1"># Give back the content of the file.</span>
+
+    <span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>                                           <span class="c1"># In case that we don&#39;t find the file.</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;No se encontró el archivo &#39;</span><span class="si">{</span><span class="n">file_name</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>               <span class="c1"># We print the exception. </span>
+        <span class="k">return</span> <span class="kc">None</span>                                                     <span class="c1"># And return none. </span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="src.LZ77Functions.LZ77Functions.texto_a_ascii" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">texto_a_ascii</span><span class="p">(</span><span class="n">text</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Convert text to ASCII representation.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>text</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Text to be converted to ASCII.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>text</code></td>          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>List of ASCII values representing the input text.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>src/LZ77Functions/LZ77Functions.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">texto_a_ascii</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Convert text to ASCII representation.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        text (str): Text to be converted to ASCII.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        text (str): List of ASCII values representing the input text.</span>
+
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="n">ascii_binario</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>                                                  <span class="c1"># Initialize the string where we are going to write the ASCII.</span>
+
+    <span class="k">for</span> <span class="n">caracter</span> <span class="ow">in</span> <span class="n">text</span><span class="p">:</span>                                               <span class="c1"># We iterate trough the text character by character. </span>
+        <span class="n">ascii_decimal</span> <span class="o">=</span> <span class="nb">ord</span><span class="p">(</span><span class="n">caracter</span><span class="p">)</span>                                   <span class="c1"># Obtain the decimal ASCII value.</span>
+        <span class="n">ascii_binario</span> <span class="o">+=</span> <span class="nb">format</span><span class="p">(</span><span class="n">ascii_decimal</span><span class="p">,</span> <span class="s1">&#39;08b&#39;</span><span class="p">)</span>                   <span class="c1"># Convert to a 8 bit binary and add it to the binary ASCII text. </span>
+
+    <span class="k">return</span> <span class="n">ascii_binario</span>                                                <span class="c1"># Give back the string text. </span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="src.LZ77Functions.LZ77Functions.validate_configuration" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">validate_configuration</span><span class="p">(</span><span class="n">Ment</span><span class="p">,</span> <span class="n">Mdes</span><span class="p">,</span> <span class="n">data_length</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Validate the configuration parameters.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>Ment</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Number of bits for entropy coding.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>Mdes</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Number of bits for describing the data.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>data_length</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Length of the data to be encoded.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Raises:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>ValueError</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>If the configuration is invalid.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>src/LZ77Functions/LZ77Functions.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">validate_configuration</span><span class="p">(</span><span class="n">Ment</span><span class="p">,</span> <span class="n">Mdes</span><span class="p">,</span> <span class="n">data_length</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Validate the configuration parameters.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        Ment (int): Number of bits for entropy coding.</span>
+<span class="sd">        Mdes (int): Number of bits for describing the data.</span>
+<span class="sd">        data_length (int): Length of the data to be encoded.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        ValueError: If the configuration is invalid.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">Ment</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">Ment</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">Mdes</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">Mdes</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>                                         <span class="c1"># Check if the input window and the sliding window are powers of 2. </span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Ment and Mdes must be powers of 2&quot;</span><span class="p">)</span>                                           <span class="c1"># If so, raise an error. </span>
+    <span class="k">if</span> <span class="n">Ment</span> <span class="o">&gt;</span> <span class="n">Mdes</span><span class="p">:</span>                                                                                     <span class="c1"># Check if the input window is bigger than the sliding window.</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Ment must be less than or equal to Mdes&quot;</span><span class="p">)</span>                                     <span class="c1"># If so, raise an error. </span>
+    <span class="k">if</span> <span class="n">Mdes</span> <span class="o">+</span> <span class="n">Ment</span> <span class="o">&gt;</span> <span class="n">data_length</span><span class="p">:</span>                                                                       <span class="c1"># Check if the sliding window  plus the input window is bigger than the length of the data.</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Mdes + Ment must be less than or equal to data length&quot;</span><span class="p">)</span>                       <span class="c1"># If so, raise an error. </span>
 </code></pre></div></td></tr></table></div>
           </details>
   </div>

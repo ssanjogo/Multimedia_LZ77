@@ -71,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#src.main" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -223,6 +228,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Main-Task
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -232,6 +248,41 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#src.main" class="md-nav__link">
+    <span class="md-ellipsis">
+      main
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.main.main" class="md-nav__link">
+    <span class="md-ellipsis">
+      main
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -275,6 +326,32 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#src.main" class="md-nav__link">
+    <span class="md-ellipsis">
+      main
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.main.main" class="md-nav__link">
+    <span class="md-ellipsis">
+      main
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -290,7 +367,83 @@
 
   <h1>Main-Task</h1>
 
+<p>In the main class we implemented different methods in order to answer the tasks that we are asked on the exercice.</p>
 
+
+<div class="doc doc-object doc-module">
+
+
+
+<a id="src.main"></a>
+  <div class="doc doc-contents first">
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="src.main.main" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">main</span><span class="p">()</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Comentario para ver si funciona.</p>
+
+          <details class="quote">
+            <summary>Source code in <code>src/main.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Comentario para ver si funciona.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">file_name</span> <span class="o">=</span> <span class="s2">&quot;../media/raw/hamlet_short.txt&quot;</span>
+    <span class="n">file_name2</span> <span class="o">=</span> <span class="s2">&quot;../media/raw/quijote_short.txt&quot;</span>
+
+    <span class="n">ejemploUso1</span><span class="p">()</span>
+    <span class="n">ejemploUso2</span><span class="p">()</span>
+    <span class="n">ejemploUso3</span><span class="p">()</span>
+    <span class="n">outputHamlet</span> <span class="o">=</span> <span class="n">analisis</span><span class="p">(</span><span class="n">file_name</span><span class="p">)</span>
+    <span class="n">outputQuijote</span> <span class="o">=</span> <span class="n">analisis</span><span class="p">(</span><span class="n">file_name2</span><span class="p">)</span>
+    <span class="n">plot</span><span class="p">(</span><span class="s2">&quot;(Hamlet)&quot;</span><span class="p">,</span> <span class="n">outputHamlet</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
 
 
 
