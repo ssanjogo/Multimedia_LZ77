@@ -272,9 +272,72 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#src.main.analisis" class="md-nav__link">
+    <span class="md-ellipsis">
+      analisis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.main.convertDictIntoLists" class="md-nav__link">
+    <span class="md-ellipsis">
+      convertDictIntoLists
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.main.firstExample" class="md-nav__link">
+    <span class="md-ellipsis">
+      firstExample
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#src.main.main" class="md-nav__link">
     <span class="md-ellipsis">
       main
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.main.plotCompressionRatio" class="md-nav__link">
+    <span class="md-ellipsis">
+      plotCompressionRatio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.main.plotLength" class="md-nav__link">
+    <span class="md-ellipsis">
+      plotLength
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.main.plotTimeAndCompression" class="md-nav__link">
+    <span class="md-ellipsis">
+      plotTimeAndCompression
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.main.secondExample" class="md-nav__link">
+    <span class="md-ellipsis">
+      secondExample
     </span>
   </a>
   
@@ -342,9 +405,72 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#src.main.analisis" class="md-nav__link">
+    <span class="md-ellipsis">
+      analisis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.main.convertDictIntoLists" class="md-nav__link">
+    <span class="md-ellipsis">
+      convertDictIntoLists
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.main.firstExample" class="md-nav__link">
+    <span class="md-ellipsis">
+      firstExample
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#src.main.main" class="md-nav__link">
     <span class="md-ellipsis">
       main
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.main.plotCompressionRatio" class="md-nav__link">
+    <span class="md-ellipsis">
+      plotCompressionRatio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.main.plotLength" class="md-nav__link">
+    <span class="md-ellipsis">
+      plotLength
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.main.plotTimeAndCompression" class="md-nav__link">
+    <span class="md-ellipsis">
+      plotTimeAndCompression
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.main.secondExample" class="md-nav__link">
+    <span class="md-ellipsis">
+      secondExample
     </span>
   </a>
   
@@ -394,6 +520,318 @@
 
 
 
+<h2 id="src.main.analisis" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">analisis</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">power1</span><span class="p">,</span> <span class="n">power2</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Method to get the values of Mdes and Ment in a range of (4, 4096) and the value of the time and ratio 
+compression for those specific sliding and input window.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>data</code></td>
+          <td>
+                <code>string</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>data to be compressed. </p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>power1</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Value of the start of the range.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>power2</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Value of the end of the range. </p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>dictionary</code></td>          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Gives back a list of tuples of tuple (Mdes, Ment) and a dictionary of the analisis with the 
+  time necesary to do the compression, the ratio compression and the factor.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>src/main.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">analisis</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">power1</span><span class="p">,</span> <span class="n">power2</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Method to get the values of Mdes and Ment in a range of (4, 4096) and the value of the time and ratio </span>
+<span class="sd">    compression for those specific sliding and input window.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        data (string): data to be compressed. </span>
+<span class="sd">        power1 (int): Value of the start of the range.</span>
+<span class="sd">        power2 (int): Value of the end of the range. </span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        dictionary: Gives back a list of tuples of tuple (Mdes, Ment) and a dictionary of the analisis with the </span>
+<span class="sd">              time necesary to do the compression, the ratio compression and the factor. </span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="n">analisis_results</span> <span class="o">=</span> <span class="p">{}</span>                                                                                   <span class="c1"># Creation of the dictionary where we are going to save the values.</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">power1</span><span class="p">,</span> <span class="n">power2</span><span class="p">):</span>                                                                         <span class="c1"># Iterate in order to get the powers of two for Mdes</span>
+        <span class="n">mdes</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">**</span> <span class="n">i</span>                                                                                       <span class="c1"># Calculate the mdes, that is 2 up to a value i. </span>
+
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="n">power1</span><span class="p">,</span> <span class="n">power2</span><span class="p">):</span>                                                                    <span class="c1"># Iterate in order to get the powers of two for Ment.</span>
+            <span class="n">ment</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">**</span> <span class="n">j</span>                                                                                   <span class="c1"># Calculate the ment, that is 2 up to a value j. </span>
+
+            <span class="k">if</span> <span class="p">((</span><span class="n">mdes</span> <span class="o">&gt;=</span> <span class="n">ment</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">mdes</span> <span class="o">+</span> <span class="n">ment</span> <span class="o">&lt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))):</span>                                             <span class="c1"># Check if the sliding window is bigger than the input window and the sum of the sliding and input window is smaller or equal to the length of the data.</span>
+                <span class="n">analisis_results</span><span class="p">[(</span><span class="n">mdes</span><span class="p">,</span> <span class="n">ment</span><span class="p">)]</span> <span class="o">=</span> <span class="n">lz77</span><span class="o">.</span><span class="n">analisis</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">mdes</span><span class="p">,</span> <span class="n">ment</span><span class="p">)</span>                            <span class="c1"># We add to the dictionary the results obtained </span>
+
+    <span class="k">return</span> <span class="n">analisis_results</span>                                                                                 <span class="c1"># Return the list of results. </span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="src.main.convertDictIntoLists" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">convertDictIntoLists</span><span class="p">(</span><span class="n">analisisDict</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Method to convert the dictionary to diferent lists. </p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>analisisDict</code></td>
+          <td>
+                <code>dictionary</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>the values obtained in the analisis.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>src/main.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">convertDictIntoLists</span><span class="p">(</span><span class="n">analisisDict</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Method to convert the dictionary to diferent lists. </span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        analisisDict (dictionary): the values obtained in the analisis. </span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">keys</span><span class="p">,</span> <span class="n">mdes_values</span><span class="p">,</span> <span class="n">ment_values</span><span class="p">,</span> <span class="n">times</span><span class="p">,</span> <span class="n">compressionFactors</span><span class="p">,</span> <span class="n">originalLength</span><span class="p">,</span> <span class="n">compressedLength</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">analisisDict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>                                                                 <span class="c1"># Iterate through the values that we obtained. </span>
+        <span class="n">keys</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+        <span class="n">mdes_values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">key</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>                                                                          <span class="c1"># Add the value of the sliding window.</span>
+        <span class="n">ment_values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">key</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>                                                                          <span class="c1"># Add the values of the input window.</span>
+        <span class="n">times</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">value</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">])</span>                                                                         <span class="c1"># Add the time.</span>
+        <span class="n">compressionFactors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">value</span><span class="p">[</span><span class="s1">&#39;Compression Ratio&#39;</span><span class="p">])</span>                                               <span class="c1"># Add the ratio compress. </span>
+        <span class="n">originalLength</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">value</span><span class="p">[</span><span class="s1">&#39;Text length&#39;</span><span class="p">])</span>
+        <span class="n">compressedLength</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">value</span><span class="p">[</span><span class="s1">&#39;Compressed data length&#39;</span><span class="p">])</span>
+
+    <span class="k">return</span> <span class="n">keys</span><span class="p">,</span> <span class="n">mdes_values</span><span class="p">,</span> <span class="n">ment_values</span><span class="p">,</span> <span class="n">times</span><span class="p">,</span> <span class="n">compressionFactors</span><span class="p">,</span> <span class="n">originalLength</span><span class="p">,</span> <span class="n">compressedLength</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="src.main.firstExample" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">firstExample</span><span class="p">()</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Method to show the first example, with a established input (1111111100100111), and then we call the method to compress and decompress. 
+We have the slinding and input window set as:
+    - Ment = 4
+    - Mdes = 8</p>
+
+          <details class="quote">
+            <summary>Source code in <code>src/main.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">firstExample</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Method to show the first example, with a established input (1111111100100111), and then we call the method to compress and decompress. </span>
+<span class="sd">    We have the slinding and input window set as:</span>
+<span class="sd">        - Ment = 4</span>
+<span class="sd">        - Mdes = 8</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;FIRST EXAMPLE&quot;</span><span class="p">)</span>
+    <span class="n">random_data</span> <span class="o">=</span> <span class="s2">&quot;1111111100100111&quot;</span>                                                                        <span class="c1"># Establish the value of the random data. </span>
+
+    <span class="n">compressed_data</span> <span class="o">=</span> <span class="n">lz77</span><span class="o">.</span><span class="n">lz77_compress</span><span class="p">(</span><span class="n">random_data</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>                                                 <span class="c1"># Compress the established data</span>
+    <span class="n">decompressed_data</span> <span class="o">=</span> <span class="n">lz77</span><span class="o">.</span><span class="n">lz77_decompress</span><span class="p">(</span><span class="n">compressed_data</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>                                         <span class="c1"># Decompress the data previously compressed.</span>
+
+    <span class="k">assert</span> <span class="n">random_data</span> <span class="o">==</span> <span class="n">decompressed_data</span>                                                                 <span class="c1"># Check if the initial random data is equal to the decompressed data.</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Original data:&quot;</span><span class="p">,</span> <span class="n">random_data</span><span class="p">)</span>                                                                    <span class="c1"># Show the original data.</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Compressed data:&quot;</span><span class="p">,</span> <span class="n">compressed_data</span><span class="p">)</span>                                                              <span class="c1"># Show the data compressed</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Decompressed data:&quot;</span><span class="p">,</span> <span class="n">decompressed_data</span><span class="p">)</span>                                                          <span class="c1"># Show the decompressed data.</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The original data and the decompressed data are equal:&quot;</span><span class="p">,</span> <span class="n">random_data</span> <span class="o">==</span> <span class="n">decompressed_data</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span> <span class="c1"># Show if the compressed data and the original data are equal.</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
 <h2 id="src.main.main" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">main</span><span class="p">()</span></code>
 
@@ -402,7 +840,7 @@
 
   <div class="doc doc-contents ">
   
-      <p>Comentario para ver si funciona.</p>
+      <p>Main method, from where we are going to call the examples and other functions to show the correct behaviour of the compressor LZ77.</p>
 
           <details class="quote">
             <summary>Source code in <code>src/main.py</code></summary>
@@ -418,19 +856,471 @@
 <span class="normal">16</span>
 <span class="normal">17</span>
 <span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    Comentario para ver si funciona.</span>
+<span class="sd">    Main method, from where we are going to call the examples and other functions to show the correct behaviour of the compressor LZ77.</span>
 <span class="sd">    &#39;&#39;&#39;</span>
-    <span class="n">file_name</span> <span class="o">=</span> <span class="s2">&quot;../media/raw/hamlet_short.txt&quot;</span>
-    <span class="n">file_name2</span> <span class="o">=</span> <span class="s2">&quot;../media/raw/quijote_short.txt&quot;</span>
 
-    <span class="n">ejemploUso1</span><span class="p">()</span>
-    <span class="n">ejemploUso2</span><span class="p">()</span>
-    <span class="n">ejemploUso3</span><span class="p">()</span>
-    <span class="n">outputHamlet</span> <span class="o">=</span> <span class="n">analisis</span><span class="p">(</span><span class="n">file_name</span><span class="p">)</span>
-    <span class="n">outputQuijote</span> <span class="o">=</span> <span class="n">analisis</span><span class="p">(</span><span class="n">file_name2</span><span class="p">)</span>
-    <span class="n">plot</span><span class="p">(</span><span class="s2">&quot;(Hamlet)&quot;</span><span class="p">,</span> <span class="n">outputHamlet</span><span class="p">)</span>
+    <span class="n">firstExample</span><span class="p">()</span>
+    <span class="n">secondExample</span><span class="p">()</span>
+
+    <span class="n">randomData</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">)])</span>
+    <span class="n">outputRandomData</span> <span class="o">=</span> <span class="n">analisis</span><span class="p">(</span><span class="n">randomData</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+    <span class="n">plotLength</span><span class="p">(</span><span class="n">outputRandomData</span><span class="p">)</span>
+    <span class="n">plotCompressionRatio</span><span class="p">(</span><span class="s2">&quot;Random Data&quot;</span><span class="p">,</span> <span class="n">outputRandomData</span><span class="p">)</span>
+    <span class="n">plotTimeAndCompression</span><span class="p">(</span><span class="s2">&quot;Random Data&quot;</span><span class="p">,</span> <span class="n">outputRandomData</span><span class="p">)</span>
+
+    <span class="n">hamletFile</span> <span class="o">=</span> <span class="s2">&quot;../media/raw/hamlet_short.txt&quot;</span>
+    <span class="n">hamletData</span> <span class="o">=</span> <span class="n">lz77</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">hamletFile</span><span class="p">)</span>  
+    <span class="n">outputHamlet</span> <span class="o">=</span> <span class="n">analisis</span><span class="p">(</span><span class="n">hamletData</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">13</span><span class="p">)</span>
+    <span class="n">plotTimeAndCompression</span><span class="p">(</span><span class="s2">&quot;(Hamlet)&quot;</span><span class="p">,</span> <span class="n">outputHamlet</span><span class="p">)</span>
+
+    <span class="n">quijoteFile</span> <span class="o">=</span> <span class="s2">&quot;../media/raw/quijote_short.txt&quot;</span>
+    <span class="n">quijoteData</span> <span class="o">=</span> <span class="n">lz77</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">quijoteFile</span><span class="p">)</span>  
+    <span class="n">outputQuijote</span> <span class="o">=</span> <span class="n">analisis</span><span class="p">(</span><span class="n">quijoteData</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">13</span><span class="p">)</span>
+    <span class="n">plotTimeAndCompression</span><span class="p">(</span><span class="s2">&quot;(Quijote)&quot;</span><span class="p">,</span> <span class="n">outputQuijote</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="src.main.plotCompressionRatio" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">plotCompressionRatio</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="n">analisisDict</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Method to plot the compression ratio and print on the screen the sliding and input window with 
+maximum compression ratio, and also the values of it. </p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>file_name</code></td>
+          <td>
+                <code>string) </code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Path where the file is located. </p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>analisisDict</code></td>
+          <td>
+                <code>dictionary</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>the values obtained in the analisis.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>src/main.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">plotCompressionRatio</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="n">analisisDict</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Method to plot the compression ratio and print on the screen the sliding and input window with </span>
+<span class="sd">    maximum compression ratio, and also the values of it. </span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        file_name (string) : Path where the file is located. </span>
+<span class="sd">        analisisDict (dictionary): the values obtained in the analisis. </span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="n">keys</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">compressionFactors</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">convertDictIntoLists</span><span class="p">(</span><span class="n">analisisDict</span><span class="p">)</span>
+
+    <span class="n">maximum_value_key</span><span class="p">,</span> <span class="n">maximum_value</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">analisisDict</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">item</span><span class="p">:</span> <span class="n">item</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s1">&#39;Compression Ratio&#39;</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mdes and Ment of maximum compression ratio:&quot;</span><span class="p">,</span> <span class="n">maximum_value_key</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Values from the compression:</span><span class="se">\n</span><span class="s2"> - Time: &quot;</span><span class="p">,</span> <span class="n">maximum_value</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">],</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> - Compression Ratio: &quot;</span><span class="p">,</span> <span class="n">maximum_value</span><span class="p">[</span><span class="s1">&#39;Compression Ratio&#39;</span><span class="p">],</span>
+          <span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> - Compression Factor: &quot;</span><span class="p">,</span> <span class="n">maximum_value</span><span class="p">[</span><span class="s1">&#39;Factor&#39;</span><span class="p">],</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> - Text Length: &quot;</span><span class="p">,</span> <span class="n">maximum_value</span><span class="p">[</span><span class="s1">&#39;Text length&#39;</span><span class="p">],</span>
+          <span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> - Compressed Data Length: &quot;</span><span class="p">,</span> <span class="n">maximum_value</span><span class="p">[</span><span class="s1">&#39;Compressed data length&#39;</span><span class="p">])</span>
+
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>                                                                                <span class="c1"># Creation of the bar graph. </span>
+    <span class="n">x_pos</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">compressionFactors</span><span class="p">))</span>                                                                  <span class="c1"># Creation of a position range for the bars.</span>
+
+    <span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x_pos</span><span class="p">,</span> <span class="n">compressionFactors</span><span class="p">)</span>                                                                       <span class="c1"># Draw the bars. </span>
+
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Mdes and Ment&#39;</span><span class="p">)</span>                                                                          <span class="c1"># Set the label of the x axis. </span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Compression factor&#39;</span><span class="p">)</span>                                                                     <span class="c1"># Set the label of the y axis</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Compression factor for &#39;</span> <span class="o">+</span> <span class="n">file_name</span><span class="p">)</span>                                                     <span class="c1"># Set the title of the figure. </span>
+
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">x_pos</span><span class="p">)</span>                                                                                    <span class="c1"># Set the position of the labels of the values.</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">keys</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">75</span><span class="p">)</span>                                                                   <span class="c1"># Establish the labels for the values of the axis x,  with a rotation of 75 degrees.</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>                                                                                              <span class="c1"># Show the plot. </span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="src.main.plotLength" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">plotLength</span><span class="p">(</span><span class="n">analisisDict</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Method to plot length of the original and the compressed data. </p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>file_name</code></td>
+          <td>
+                <code>string) </code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Path where the file is located. </p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>analisisDict</code></td>
+          <td>
+                <code>dictionary</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>the values obtained in the analisis.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>src/main.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">plotLength</span><span class="p">(</span><span class="n">analisisDict</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Method to plot length of the original and the compressed data. </span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        file_name (string) : Path where the file is located. </span>
+<span class="sd">        analisisDict (dictionary): the values obtained in the analisis. </span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="n">keys</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">originalLength</span><span class="p">,</span> <span class="n">compressedLength</span> <span class="o">=</span> <span class="n">convertDictIntoLists</span><span class="p">(</span><span class="n">analisisDict</span><span class="p">)</span>                 <span class="c1"># Get the lists.</span>
+
+    <span class="n">ancho_barra</span> <span class="o">=</span> <span class="mf">0.35</span>                                                                                      <span class="c1"># Width of the bars.</span>
+    <span class="n">posiciones</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">keys</span><span class="p">))</span>                                                                           <span class="c1"># Position of the axis x for the bars.</span>
+
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>                                                                                <span class="c1"># Create the figure and the axis.</span>
+    <span class="n">rects1</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">posiciones</span><span class="p">,</span> <span class="n">originalLength</span><span class="p">,</span> <span class="n">ancho_barra</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Longitud de Datos Originales&#39;</span><span class="p">)</span>          <span class="c1"># Create the bar for the original data.</span>
+
+    <span class="n">rects2</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">([</span><span class="n">pos</span> <span class="o">+</span> <span class="n">ancho_barra</span> <span class="k">for</span> <span class="n">pos</span> <span class="ow">in</span> <span class="n">posiciones</span><span class="p">],</span> <span class="n">compressedLength</span><span class="p">,</span> <span class="n">ancho_barra</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Longitud de Datos Comprimidos&#39;</span><span class="p">)</span>    <span class="c1"># Create the bar for the compressed data.</span>
+
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Longitud&#39;</span><span class="p">)</span>                                                                               <span class="c1"># Set the label of the axis y. </span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Data Comparison Original vs. Compress&#39;</span><span class="p">)</span>                                                   <span class="c1"># Set the title of the graph.</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([</span><span class="n">pos</span> <span class="o">+</span> <span class="n">ancho_barra</span> <span class="o">/</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">pos</span> <span class="ow">in</span> <span class="n">posiciones</span><span class="p">])</span>                                            <span class="c1"># Set the position of the labels of the values.</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">keys</span><span class="p">,</span> <span class="n">rotation</span> <span class="o">=</span> <span class="mi">75</span><span class="p">)</span>                                                                 <span class="c1"># Establish the labels for the values of the axis x, with a rotation of 75 degrees. </span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>                                                                                             <span class="c1"># Set the legend</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>                                                                                              <span class="c1"># Show the plot. </span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="src.main.plotTimeAndCompression" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">plotTimeAndCompression</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="n">analisisDict</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Method to plot the time and compression ratio against the sliding and input window. </p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>file_name</code></td>
+          <td>
+                <code>string) </code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Path where the file is located. </p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>analisisDict</code></td>
+          <td>
+                <code>dictionary</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>the values obtained in the analisis.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+          <details class="quote">
+            <summary>Source code in <code>src/main.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">plotTimeAndCompression</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="n">analisisDict</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Method to plot the time and compression ratio against the sliding and input window. </span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        file_name (string) : Path where the file is located. </span>
+<span class="sd">        analisisDict (dictionary): the values obtained in the analisis. </span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="n">_</span><span class="p">,</span> <span class="n">mdes_values</span><span class="p">,</span> <span class="n">ment_values</span><span class="p">,</span> <span class="n">times</span><span class="p">,</span> <span class="n">compressionFactors</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">convertDictIntoLists</span><span class="p">(</span><span class="n">analisisDict</span><span class="p">)</span>       <span class="c1"># Get the lists.</span>
+
+    <span class="n">fig1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>                                                                                     <span class="c1"># Creation of the plot for the time.</span>
+    <span class="n">ax1</span> <span class="o">=</span> <span class="n">fig1</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>                                                            <span class="c1"># Add a 3d subplot. </span>
+    <span class="n">ax1</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">mdes_values</span><span class="p">,</span> <span class="n">ment_values</span><span class="p">,</span> <span class="n">times</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>                                         <span class="c1"># Create the scatter plot.</span>
+    <span class="n">ax1</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Mdes&#39;</span><span class="p">)</span>                                                                                  <span class="c1"># Set x label.</span>
+    <span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Ment&#39;</span><span class="p">)</span>                                                                                  <span class="c1"># Set the y label.</span>
+    <span class="n">ax1</span><span class="o">.</span><span class="n">set_zlabel</span><span class="p">(</span><span class="s1">&#39;Time (s)&#39;</span><span class="p">)</span>                                                                              <span class="c1"># Set the z label. </span>
+    <span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Time for different values of Mdes and Ment on the file: &#39;</span> <span class="o">+</span> <span class="n">file_name</span><span class="p">)</span>                   <span class="c1"># Set the title of the plot.</span>
+
+    <span class="n">fig2</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>                                                                                     <span class="c1"># Creation of the plot for the compression factor.</span>
+    <span class="n">ax2</span> <span class="o">=</span> <span class="n">fig2</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>                                                            <span class="c1"># Add a 3d subplot. </span>
+    <span class="n">ax2</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">mdes_values</span><span class="p">,</span> <span class="n">ment_values</span><span class="p">,</span> <span class="n">compressionFactors</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>                            <span class="c1"># Create the scatter plot.</span>
+    <span class="n">ax2</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Mdes&#39;</span><span class="p">)</span>                                                                                  <span class="c1"># Set x label.</span>
+    <span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Ment&#39;</span><span class="p">)</span>                                                                                  <span class="c1"># Set the y label.</span>
+    <span class="n">ax2</span><span class="o">.</span><span class="n">set_zlabel</span><span class="p">(</span><span class="s1">&#39;Compression factor&#39;</span><span class="p">)</span>                                                                    <span class="c1"># Set the z label. </span>
+    <span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Compression factor for different values of Mdes and Ment on the file: &#39;</span> <span class="o">+</span> <span class="n">file_name</span><span class="p">)</span>     <span class="c1"># Set the title of the plot.</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>                                                                                              <span class="c1"># Show the plots</span>
+</code></pre></div></td></tr></table></div>
+          </details>
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="src.main.secondExample" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">secondExample</span><span class="p">()</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Method to show the second example, with a random input data, and then we call the method to compress and decompress. 
+We have the slinding and input window set as:
+    - Ment = 4
+    - Mdes = 8</p>
+
+          <details class="quote">
+            <summary>Source code in <code>src/main.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">secondExample</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Method to show the second example, with a random input data, and then we call the method to compress and decompress. </span>
+<span class="sd">    We have the slinding and input window set as:</span>
+<span class="sd">        - Ment = 4</span>
+<span class="sd">        - Mdes = 8</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;SECOND EXAMPLE, with random data&quot;</span><span class="p">)</span>
+    <span class="n">random_data</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">250</span><span class="p">)])</span>                                  <span class="c1"># Establish the value of the random data, randomly. </span>
+
+    <span class="n">compressed_data</span> <span class="o">=</span> <span class="n">lz77</span><span class="o">.</span><span class="n">lz77_compress</span><span class="p">(</span><span class="n">random_data</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>                                                 <span class="c1"># Compress the established data</span>
+    <span class="n">decompressed_data</span> <span class="o">=</span> <span class="n">lz77</span><span class="o">.</span><span class="n">lz77_decompress</span><span class="p">(</span><span class="n">compressed_data</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>                                         <span class="c1"># Decompress the data previously compressed.</span>
+
+    <span class="k">assert</span> <span class="n">random_data</span> <span class="o">==</span> <span class="n">decompressed_data</span>                                                                 <span class="c1"># Check if the initial random data is equal to the decompressed data.</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Original data:&quot;</span><span class="p">,</span> <span class="n">random_data</span><span class="p">)</span>                                                                    <span class="c1"># Show the original data.</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Compressed data:&quot;</span><span class="p">,</span> <span class="n">compressed_data</span><span class="p">)</span>                                                              <span class="c1"># Show the data compressed</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Decompressed data:&quot;</span><span class="p">,</span> <span class="n">decompressed_data</span><span class="p">)</span>                                                          <span class="c1"># Show the decompressed data.</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The original data and the decompressed data are equal:&quot;</span><span class="p">,</span> <span class="n">random_data</span> <span class="o">==</span> <span class="n">decompressed_data</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span> <span class="c1"># Show if the compressed data and the original data are equal.</span>
 </code></pre></div></td></tr></table></div>
           </details>
   </div>

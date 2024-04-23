@@ -100,33 +100,33 @@ def lz77_decompress(compressed_data, Ment, Mdes):
         str: Decompressed data.
 
     '''
-    decompressed_data = compressed_data[:Mdes]
-    i = Mdes
+    decompressed_data = compressed_data[:Mdes]                                                                      # Inicialization of the decompressed data
+    i = Mdes                                                                                                        # Establish the value of i as the sliding window. 
 
-    while i < len(compressed_data)-Ment:
-        control_bit = compressed_data[i]
+    while i < len(compressed_data)-Ment:                                                                            # Iterate through the sliding window while the length of the compressed data minus the input window is bigger than the sliding window. 
+        control_bit = compressed_data[i]                                                                            # Take the first bit. We know that is a control bit.
 
-        if control_bit == '0':  # Literal
-            decompressed_data += compressed_data[i+1]
-            i += 2
+        if control_bit == '0':  # Literal                                                                           # If the control bit is a 0 
+            decompressed_data += compressed_data[i+1]                                                               # Add the value to th e decompressed data.
+            i += 2                                                                                                  # Iterate to the next value. 
 
-        else:  # Tupla (L,D)
-            length_bits = compressed_data[i+1:i+1+int(math.log2(Ment))]
-            distance_bits = compressed_data[i+1+int(math.log2(Ment)):i+1+int(math.log2(Ment))+int(math.log2(Mdes))]
-            length = int(length_bits, 2)
+        else:  # Tupla (L,D)                                                                                        # If it is not a control bit, then we have the tupli from L, length of the match, and D position of the start of the match.
+            length_bits = compressed_data[i+1:i+1+int(math.log2(Ment))]                                             # Get/read the length of the match.
+            distance_bits = compressed_data[i+1+int(math.log2(Ment)):i+1+int(math.log2(Ment))+int(math.log2(Mdes))] # Get/read the value of the position of the match. 
+            length = int(length_bits, 2)                                                                            
             distance = int(distance_bits, 2)
 
-            if length == 0:
-                length = Ment
-            if distance == 0:
-                distance = Mdes
+            if length == 0:                                                                                         # If the length is equal to 0.
+                length = Ment                                                                                       # we set the length value as the input window. 
+            if distance == 0:                                                                                       # If the ditance is equal to 0.
+                distance = Mdes                                                                                     # we set the length value as the input window.                                                                                
 
-            tmp=decompressed_data
+            tmp = decompressed_data                                                                                 # Creation and inicialization of a temporal variable as the decompressed data.
 
-            for j in range(length):
-                decompressed_data += str(tmp[-distance+j])
+            for j in range(length):                                                                                 # Iterate through the range of the length
+                decompressed_data += str(tmp[-distance+j])                                                          # Add the decompressed data of the distance plus the value that we iterate. 
 
-            i += 1 + int(math.log2(Ment)) + int(math.log2(Mdes))
+            i += 1 + int(math.log2(Ment)) + int(math.log2(Mdes))                                                    # Incrementation of the i value.
 
     decompressed_data+=str(compressed_data[i:])
 
@@ -143,24 +143,27 @@ def analisis(text, Mdes, Ment):
         Mdes (int): Number of bits for describing the data.
 
     Returns:
-
+        dictionary: We give back a dictionary with the time necesary to do the compression, the ratio compression and the factor. 
 
     '''
-    #con distintos valores de Mdes y Ment entre 4 y 4096 y analizad el factor de compresión y el tiempo invertido
-    compression_ratio = 0
-    if Mdes < Ment:
-        return "error"
 
-    inicio = time.time()
+    compression_ratio = 0                                               # Initialize the compression factor.
+    if Mdes < Ment:                                                     # Check if the sliding window is smaller than the input window.
+        return "error"                                                  # If so, return an error.
 
-    if text:
-        binario = texto_a_ascii(text)
-        compressed_data = lz77_compress(binario, Ment, Mdes)
-        compression_ratio = len(text) / len(compressed_data)
+    inicio = time.time()                                                # Establish the init time. 
 
-    fin = time.time()  # Tiempo de finalización
-    tiempo_total = fin - inicio
-    return {'tiempo':tiempo_total, "Ratio Compression":compression_ratio, "Factor": str(compression_ratio)+":1"}
+    if text:                                                            # If the text is not none.
+        binario = texto_a_ascii(text)                                   # We convert the text to binary ascii.
+        compressed_data = lz77_compress(binario, Ment, Mdes)            # Compress the data in binary.
+        compression_ratio = len(text) / len(compressed_data)            # Calculate the compression ratio.
+
+    fin = time.time()                                                   # Establish the finishing time. 
+    tiempo_total = fin - inicio                                         # Calculate the time needed for the execution. 
+
+    return {'Time': tiempo_total, 'Compression Ratio': compression_ratio, 
+            'Factor': str(compression_ratio)+":1", 'Text length': len(text), 
+            'Compressed data length': len(compressed_data)}             # Return the time, compression ratio and the factor, the text length and the compressed data length. 
 
 
 def texto_a_ascii(text):
@@ -218,7 +221,7 @@ def read_file(file_name):
 
     '''
     try:
-        with open(file_name, 'r', encoding='latin1') as archivo:                           # We open the file. 
+        with open(file_name, 'r', encoding='latin1') as archivo:        # We open the file. 
             contenido = archivo.read()                                  # We read the file
         return contenido                                                # Give back the content of the file.
     
