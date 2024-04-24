@@ -94,18 +94,19 @@ In this experiment, being completely random and finding hardly any matches, smal
 #### Data comparision original vs. compressed
 ![alt text](<media/raw/Data comparision original vs. compressed - HAMLET.png>)
 
-Si cojemos dos frases de longitud promedio, del texto como por ejemplo las dos siguientes:
+If we take two sentences of average length, from the text as for example the following two:
 
 BERNARDO 'Tis now struck twelve; get thee to bed, Francisco.
+
 FRANCISCO For this relief much thanks: 'tis bitter cold, And I am sick at heart.
 
-Contamos el numero de caracteres. Numero de caracteres = 141. 
-Multiplicamos este numero por 8 debido a que el texto esta codificado en ASCII 8 bits. Numero de caracteres * 8 = 1128.
+We count the number of characters. Number of characters = 141. 
+We multiply this number by 8 because the text is encoded in ASCII 8 bits. Number of characters * 8 = 1128.
 
-Las coincidencias mas obvias en este texto son los nombres de los personajes, que se repiten cada vez que estos tienen una linia de texto.
-En caso de querer codificar FRANCISCO, se que esta palabra ha salido en dos frases de distancia. De manera que el tamaño de la ventana deslizante tiene que ser de un tamaño cercano o mayor al tamaño de las dos frases. 
+The most obvious matches in this text are the names of the characters, which are repeated every time they have a line of text.
+In case you want to encode FRANCISCO, knowing that this word appears previously. So the size of the sliding window has to be close to or larger than the length of the two sentences. 
 
-Cuando tenemos un tamaño de ventana deslizante proximo a este optenemos mejores valores. 
+When we have a sliding window size close to this we get better values. The length of the compressed text is smaller than the original. 
 
 
 #### Compression factor depending on (Mdes, Ment)
@@ -119,18 +120,19 @@ Values from the compression:
  - Text Length:  8344 
  - Compressed Data Length:  7132
 
-
+In this case we can see that there are some compression ratios that are bigger than 1. The best compression ratio is 1.69. The compressed data length is smaller than than text lenght, decreasing the text size by more than 1000 characters. 
 
 #### Time depending on (Mdes, Ment)
 ![alt text](<media/raw/Time depending on (Mdes, Ment) - HAMLET.png>)
 
-
-
+We have an exponential trend in time as the sliding and input windows increase, and we have this trend periodically. Except for the input window and slider value of 4096 as the text size is approximately the size of the original text.
 
 ### Plots for Quijote text
 --- 
 #### Data comparision original vs. compressed
 ![alt text](<media/raw/Data comparision original vs. compressed - QUIJOTE.png>)
+
+In this case we can observe that with different combinations of the value of the sliding window and the input window, we get some compressions that are below the length of the original data length.
 
 #### Compression factor depending on (Mdes, Ment)
 ![alt text](<media/raw/Compression factor depending on (Mdes, Ment) - QUIJOTE.png>)
@@ -143,10 +145,13 @@ Values from the compression:
  - Text Length:  8208 
  - Compressed Data Length:  7593
 
+In this case we can see that there are some compression ratios that are bigger than 1. The best compression ratio is 1.08. The compressed data length is smaller than than text lenght, decreasing the text size by about 800 characters. 
+
 
 #### Time depending on (Mdes, Ment)
 ![alt text](<media/raw/Time depending on (Mdes, Ment) - QUIJOTE.png>)
 
+As in the previous example with the Hamlet text, we have an exponential trend in time as the sliding and input window increase periodically. Except for the input window and slider value of 4096 as the text size is approximately the size of the original text.
 
 
 ## Developed by 
