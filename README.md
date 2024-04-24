@@ -85,7 +85,9 @@ As we can see the compression ratio is always less than 1. Therefore, we are not
 ![alt text](<media/raw/Time depending on (Mdes, Ment) - RANDOM DATA.png>)
 
 
+As we can see we find a runtime relationship. The larger the sliding window and the input window, the longer the algorithm takes. This is an exceptional case, as these results may vary if we find a large number of matches for large input windows.
 
+In this experiment, being completely random and finding hardly any matches, smaller input windows have fewer characters to iterate through and get to the point of having to add the Literal to the string faster. That's why these runs are faster, but worse performance-wise.
 
 ### Plots for Hamlet text
 --- 
