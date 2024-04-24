@@ -78,6 +78,9 @@ Values from the compression:
  - Text Length:  10000 
  - Compressed Data Length:  13247
 
+
+As we can see the compression ratio is always less than 1. Therefore, we are not compressing at all, quite the contrary.
+
 #### Time depending on (Mdes, Ment)
 ![alt text](<media/raw/Time depending on (Mdes, Ment) - RANDOM DATA.png>)
 
