@@ -11,23 +11,28 @@ def main():
 
     firstExample()
     secondExample()
-
-    randomData = ''.join([str(random.randint(0, 1)) for _ in range(1000)])
-    outputRandomData = analisis(randomData, 1, 12)
-    plotLength(outputRandomData)
+    
+    randomData = ''.join([str(random.randint(0, 1)) for _ in range(10000)])
+    outputRandomData = analisis(randomData, 1, 12, False)
+    plotLength("Random Data", outputRandomData)
     plotCompressionRatio("Random Data", outputRandomData)
+    plotTime("Random Data", outputRandomData)
     plotTimeAndCompression("Random Data", outputRandomData)
-
+   
     hamletFile = "../media/raw/hamlet_short.txt"
     hamletData = lz77.read_file(hamletFile)  
-    outputHamlet = analisis(hamletData, 2, 13)
+    outputHamlet = analisis(hamletData, 2, 13, True)
+    plotLength("(Hamlet)", outputHamlet)
     plotCompressionRatio("(Hamlet)", outputHamlet)
+    plotTime("(Hamlet)", outputHamlet)
     plotTimeAndCompression("(Hamlet)", outputHamlet)
 
     quijoteFile = "../media/raw/quijote_short.txt"
     quijoteData = lz77.read_file(quijoteFile)  
-    outputQuijote = analisis(quijoteData, 2, 13)
+    outputQuijote = analisis(quijoteData, 2, 13, True)
+    plotLength("(Quijote)", outputQuijote)
     plotCompressionRatio("(Quijote)", outputQuijote)
+    plotTime("(Quijote)", outputQuijote)
     plotTimeAndCompression("(Quijote)", outputQuijote)
 
 
@@ -73,7 +78,7 @@ def secondExample():
     print("The original data and the decompressed data are equal:", random_data == decompressed_data, "\n") # Show if the compressed data and the original data are equal.
 
 
-def analisis(data, power1, power2):
+def analisis(data, power1, power2, binary):
     '''
     Method to get the values of Mdes and Ment in a range of (4, 4096) and the value of the time and ratio 
     compression for those specific sliding and input window.
@@ -82,6 +87,7 @@ def analisis(data, power1, power2):
         data (string): data to be compressed. 
         power1 (int): Value of the start of the range.
         power2 (int): Value of the end of the range. 
+        binary (bool): Needs to be converted into a binary value.
     
     Returns:
         dictionary: Gives back a list of tuples of tuple (Mdes, Ment) and a dictionary of the analisis with the 
@@ -90,14 +96,19 @@ def analisis(data, power1, power2):
 
     analisis_results = {}                                                                                   # Creation of the dictionary where we are going to save the values.
 
+    if (binary):
+        text = lz77.texto_a_ascii(data)
+    else: 
+        text = data
+
     for i in range(power1, power2):                                                                         # Iterate in order to get the powers of two for Mdes
         mdes = 2 ** i                                                                                       # Calculate the mdes, that is 2 up to a value i. 
 
         for j in range (power1, power2):                                                                    # Iterate in order to get the powers of two for Ment.
             ment = 2 ** j                                                                                   # Calculate the ment, that is 2 up to a value j. 
 
-            if ((mdes >= ment) and (mdes + ment <= len(data))):                                             # Check if the sliding window is bigger than the input window and the sum of the sliding and input window is smaller or equal to the length of the data.
-                analisis_results[(mdes, ment)] = lz77.analisis(data, mdes, ment)                            # We add to the dictionary the results obtained 
+            if ((mdes >= ment) and (mdes + ment <= len(text))):                                             # Check if the sliding window is bigger than the input window and the sum of the sliding and input window is smaller or equal to the length of the data.
+                analisis_results[(mdes, ment)] = lz77.analisis(data, mdes, ment, binary)                    # We add to the dictionary the results obtained 
     
     return analisis_results                                                                                 # Return the list of results. 
 
@@ -123,28 +134,30 @@ def convertDictIntoLists(analisisDict):
     return keys, mdes_values, ment_values, times, compressionFactors, originalLength, compressedLength
     
 
-def plotLength(analisisDict):
+def plotLength(file_name, analisisDict):
     '''
     Method to plot length of the original and the compressed data. 
 
     Args:
-        file_name (string) : Path where the file is located. 
+        file_name (string): Name the text that we are ploting. 
         analisisDict (dictionary): the values obtained in the analisis. 
     '''
 
     keys, _, _, _, _, originalLength, compressedLength = convertDictIntoLists(analisisDict)                 # Get the lists.
 
     ancho_barra = 0.35                                                                                      # Width of the bars.
-    posiciones = range(len(keys))                                                                           # Position of the axis x for the bars.
+    pos = range(len(keys))                                                                                  # Position of the axis x for the bars.
+    binaryLength = originalLength[0]
 
     fig, ax = plt.subplots()                                                                                # Create the figure and the axis.
-    rects1 = ax.bar(posiciones, originalLength, ancho_barra, label='Longitud de Datos Originales')          # Create the bar for the original data.
+    rects1 = ax.bar(pos, compressedLength, ancho_barra, label='Compressed data length')                     # Create the bar for the original data.
 
-    rects2 = ax.bar([pos + ancho_barra for pos in posiciones], compressedLength, ancho_barra, label='Longitud de Datos Comprimidos')    # Create the bar for the compressed data.
+    rectaHoriz = ax.axhline(y = binaryLength, color='r', linestyle='--', label= 'Original data length')     # Create the bar for the compressed data.
 
+    ax.set_xlabel("(Mdes, Ment)")
     ax.set_ylabel('Longitud')                                                                               # Set the label of the axis y. 
-    ax.set_title('Data Comparison Original vs. Compress')                                                   # Set the title of the graph.
-    ax.set_xticks([pos + ancho_barra / 2 for pos in posiciones])                                            # Set the position of the labels of the values.
+    ax.set_title('Data Comparison Original vs. Compress for ' + file_name)                                  # Set the title of the graph.
+    ax.set_xticks([pos + ancho_barra / 2 for pos in pos])                                                   # Set the position of the labels of the values.
     ax.set_xticklabels(keys, rotation = 75)                                                                 # Establish the labels for the values of the axis x, with a rotation of 75 degrees. 
     ax.legend()                                                                                             # Set the legend
 
@@ -157,7 +170,7 @@ def plotCompressionRatio(file_name, analisisDict):
     maximum compression ratio, and also the values of it. 
 
     Args:
-        file_name (string) : Path where the file is located. 
+        file_name (string): Name the text that we are ploting. 
         analisisDict (dictionary): the values obtained in the analisis. 
     '''
 
@@ -176,7 +189,7 @@ def plotCompressionRatio(file_name, analisisDict):
 
     ax.set_xlabel('Mdes and Ment')                                                                          # Set the label of the x axis. 
     ax.set_ylabel('Compression factor')                                                                     # Set the label of the y axis
-    ax.set_title('Compression factor for ' + file_name)                                                     # Set the title of the figure. 
+    ax.set_title('Compression factor depending on (Mdes, Ment) for ' + file_name)                           # Set the title of the figure. 
 
     ax.set_xticks(x_pos)                                                                                    # Set the position of the labels of the values.
     ax.set_xticklabels(keys, rotation=75)                                                                   # Establish the labels for the values of the axis x,  with a rotation of 75 degrees.
@@ -184,12 +197,38 @@ def plotCompressionRatio(file_name, analisisDict):
     plt.show()                                                                                              # Show the plot. 
 
 
+def plotTime(file_name, analisisDict):
+    '''
+    Method to plot the time depending on Ment and Mdes. 
+
+    Args:
+        file_name (string): Name the text that we are ploting. 
+        analisisDict (dictionary): the values obtained in the analisis. 
+    '''
+
+    keys, _, _, times, _, _, _ = convertDictIntoLists(analisisDict)
+
+    fig, ax = plt.subplots()                                                                                # Creation of the bar graph. 
+    x_pos = range(len(times))                                                                               # Creation of a position range for the bars.
+
+    ax.bar(x_pos, times)                                                                                    # Draw the bars. 
+
+    ax.set_xlabel('Mdes and Ment')                                                                          # Set the label of the x axis. 
+    ax.set_ylabel('Time')                                                                                   # Set the label of the y axis
+    ax.set_title('Time dependind on (Mdes, Ment) for ' + file_name)                                         # Set the title of the figure. 
+
+    ax.set_xticks(x_pos)                                                                                    # Set the position of the labels of the values.
+    ax.set_xticklabels(keys, rotation=75)                                                                   # Establish the labels for the values of the axis x,  with a rotation of 75 degrees.
+
+    plt.show()                                                                                              # Show the plot.    
+
+
 def plotTimeAndCompression(file_name, analisisDict):
     '''
     Method to plot the time and compression ratio against the sliding and input window. 
 
     Args:
-        file_name (string) : Path where the file is located. 
+        file_name (string): Name the text that we are ploting. 
         analisisDict (dictionary): the values obtained in the analisis. 
     '''
     

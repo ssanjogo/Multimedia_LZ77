@@ -133,7 +133,7 @@ def lz77_decompress(compressed_data, Ment, Mdes):
     return decompressed_data
 
 
-def analisis(text, Mdes, Ment):
+def analisis(text, Mdes, Ment, binary):
     '''
     Method to give the information for the analysis of the data 
 
@@ -141,6 +141,7 @@ def analisis(text, Mdes, Ment):
         text (str): Data to be analized.
         Ment (int): Number of bits for entropy coding.
         Mdes (int): Number of bits for describing the data.
+        binary (bool): Needs to be converted into a binary value.
 
     Returns:
         dictionary: We give back a dictionary with the time necesary to do the compression, the ratio compression and the factor. 
@@ -154,15 +155,19 @@ def analisis(text, Mdes, Ment):
     inicio = time.time()                                                # Establish the init time. 
 
     if text:                                                            # If the text is not none.
-        binario = texto_a_ascii(text)                                   # We convert the text to binary ascii.
+        if (binary):
+            binario = texto_a_ascii(text)                               # We convert the text to binary ascii.
+        else: 
+            binario = text                                              # We dont need to convert to binary, because its binary already. 
+                                  
         compressed_data = lz77_compress(binario, Ment, Mdes)            # Compress the data in binary.
-        compression_ratio = len(text) / len(compressed_data)            # Calculate the compression ratio.
+        compression_ratio = len(binario) / len(compressed_data)         # Calculate the compression ratio.
 
     fin = time.time()                                                   # Establish the finishing time. 
     tiempo_total = fin - inicio                                         # Calculate the time needed for the execution. 
 
     return {'Time': tiempo_total, 'Compression Ratio': compression_ratio, 
-            'Factor': str(compression_ratio)+":1", 'Text length': len(text), 
+            'Factor': str(compression_ratio)+":1", 'Text length': len(binario), 
             'Compressed data length': len(compressed_data)}             # Return the time, compression ratio and the factor, the text length and the compressed data length. 
 
 
