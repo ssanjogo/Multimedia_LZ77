@@ -65,7 +65,7 @@ For this exercise we did different plots.
 #### Data comparision original vs. compressed
 ![alt text](<media/raw/Data comparision original vs. compressed - RANDOM DATA.png>)
 
-We can see that in any case we get a compression better than the original text this is due to the generation of random values to lead to no matches or repetitions on the chain. 
+The red flashing line represents the length of the randomly generated binary code, while the blue vertical lines represent the length of the code after processing. We can see that in any case we get a compression better than the original text this is due to the generation of random values to lead to no matches or repetitions on the chain. 
 
 #### Compression factor depending on (Mdes, Ment)
 ![alt text](<media/raw/Compression factor depending on (Mdes, Ment) - RANDOM DATA.png>)
